@@ -9,9 +9,9 @@ export default class Header extends Component {
 
     return (
       <div className="outbox">
-        <Navbar expand="lg">
-          <Nav className="justify-content-end" style={{ width: "100%" }}>
-            Header
+        <Navbar>
+          <Nav className="nav-container" style={{ width: "100%" }}>
+            <span>Employee Registration</span>
           </Nav>
         </Navbar>
       </div>

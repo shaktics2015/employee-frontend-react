@@ -24,7 +24,16 @@ export default class EmployeeTable extends Component {
           <tbody>
 
           {employees.map((employee, i) => {
-                    return <tr key={i}> <td>{i+1}</td>  <td>{employee.firstName}</td> <td>{employee.lastName}</td> <td>{employee.gender}</td> <td>{dateFormatter(employee.dob)}</td> <td>{employee.department.name}</td></tr>
+                    return (
+                      <tr key={i}> 
+                        <td>{i+1}</td>  
+                        <td>{employee.firstName}</td> 
+                        <td>{employee.lastName}</td> 
+                        <td>{employee.gender}</td> 
+                        <td>{dateFormatter(employee.dob)}</td> 
+                        <td>{employee.department.name}</td>
+                      </tr>
+                    );
           })}  
           </tbody>
         </Table>}

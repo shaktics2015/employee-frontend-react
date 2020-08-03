@@ -3,10 +3,10 @@
 	color: white;
 }
 
-.notification-icon-container {
-	cursor: pointer;
+.nav-container span{
+	text-align: center;
 	color: white !important;
-	padding: 8px 19px 8px 0;
+	padding: 8px 0px 8px 0;
 }
 
 @media screen and (max-width: 992px) {
