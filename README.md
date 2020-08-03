@@ -1,4 +1,4 @@
-# Notification Widget(ReactJs)
+# Employee Portal GUI(ReactJs)
  
 ## Install required dependencies
 
@@ -10,22 +10,18 @@
 
 ## URL to access the application 
 
-    http://localhost:3000/
-
-## Configuration 
-
-   User will not be able to see details If an Item has `clickable:false`, this is being served in server response.
+    http://localhost:3000
 
 ## Screens
  
-### Fullscreen
-![Alt text](https://github.com/shaktics2015/Notification-Widget-ReactJs/blob/master/screenshots/1.png "Full screen")
+### Fresh form
+![Alt text](https://github.com/shaktics2015/employee-frontend-react/blob/master/screenshots/1.png "Fresh form")
 
-### With Details
-![Alt text](https://github.com/shaktics2015/Notification-Widget-ReactJs/blob/master/screenshots/2.png "With Details")
+### Validation messages
+![Alt text](https://github.com/shaktics2015/employee-frontend-react/blob/master/screenshots/2.png "Validation messages")
 
-### Card with read/un-read control
-![Alt text](https://github.com/shaktics2015/Notification-Widget-ReactJs/blob/master/screenshots/3.png "Card with read/un-read control")
+### Validation cleared
+![Alt text](https://github.com/shaktics2015/employee-frontend-react/blob/master/screenshots/3.png "Validation cleared")
 
-### Click disabled on 2nd card but read/un-read works
-![Alt text](https://github.com/shaktics2015/Notification-Widget-ReactJs/blob/master/screenshots/4.png "Click disabled on 2nd card but read/un-read works")
+### Employee added to table
+![Alt text](https://github.com/shaktics2015/employee-frontend-react/blob/master/screenshots/4.png "Employee added to table")

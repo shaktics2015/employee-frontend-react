@@ -93,19 +93,24 @@ class App extends Component {
   formatDate(date) {
     return new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(date));
   }
+
   handleSubmit(event) {
-    console.log('form submitted: ', this.state.employee);
+    console.log('form submitted new: ', this.state.employee);
 
     if (this.handleValidation()) {
       this.props.saveEmployee(this.state.employee);
       setTimeout(
         function () {
           this.props.getEmployees();
+          // this.refs.employeeForm.reset();
 
+          Object.keys(this.state).map((key, index) => {
+            this.setState({[key] : ""});
+         });
         }
           .bind(this),
-        2000
-      );
+        1000
+      ); 
     } else {
       // alert("Form has errors.")
     }
@@ -129,7 +134,7 @@ class App extends Component {
         <Header />
         <div className="app-body">
           {/* <pre>{JSON.stringify(department, null, 2)}</pre> */}
-          <Form className="form-container" onSubmit={this.handleSubmit}>
+          <Form ref="employeeForm" className="form-container" onSubmit={this.handleSubmit}>
             <Form.Group controlId="employeeForm.firstName">
               <Form.Label>First name</Form.Label>
               <Form.Control onChange={(e) => this.handleChange('firstName', e)} value={this.state.employee.firstName} type="text" placeholder="John" />
@@ -167,8 +172,11 @@ class App extends Component {
             <Button type="submit" >Save</Button>
 
           </Form>
+          
+          {employee && employee.data && <div><hr></hr>
+          <h4>Employees</h4>
           <hr></hr>
-          {employee && employee.data && <EmployeeTable employees={employee.data} dateFormatter={that.formatDate} />}
+          <EmployeeTable employees={employee.data} dateFormatter={that.formatDate} /></div>}
 
         </div>
       </div>
