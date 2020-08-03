@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import './EmployeeTable.css';
 import { Table } from "react-bootstrap";
 
+const GenderEnum = {"1": "MALE", "2": "FEMALE"};
+
 export default class EmployeeTable extends Component {
 
   render() {
@@ -29,7 +31,7 @@ export default class EmployeeTable extends Component {
                         <td>{i+1}</td>  
                         <td>{employee.firstName}</td> 
                         <td>{employee.lastName}</td> 
-                        <td>{employee.gender}</td> 
+                        <td>{GenderEnum[employee.gender]}</td> 
                         <td>{dateFormatter(employee.dob)}</td> 
                         <td>{employee.department.name}</td>
                       </tr>
