@@ -20,7 +20,7 @@ export default class EmployeeTable extends Component {
               <th>Last Name</th>
               <th>Gender</th>
               <th>Date of birth</th>
-              <th>Department</th>
+              {employees.length>0 && employees[0].department && <th>Department</th>}
             </tr>
           </thead>
           <tbody>
@@ -33,7 +33,7 @@ export default class EmployeeTable extends Component {
                         <td>{employee.lastName}</td> 
                         <td>{GenderEnum[employee.gender]}</td> 
                         <td>{dateFormatter(employee.dob)}</td> 
-                        <td>{employee.department.name}</td>
+                       { employee.department && employee.department.name && <td>{employee.department.name}</td>}
                       </tr>
                     );
           })}  
